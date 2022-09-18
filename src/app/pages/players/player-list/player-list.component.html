@@ -1,0 +1,28 @@
+<button class="btn btn-success" (click)="navigateToAddPlayer()">Add player</button>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Shirt number</th>
+        <th scope="col">Team</th>
+        <th scope="col">Age</th>
+        <th scope="col">Wage</th>
+        <th scope="col">End of contract date</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let player of players$ | async">
+        <th>{{player.name}}</th>
+        <td>{{player.shirtNumber}}</td>
+        <td>{{player.team}}</td>
+        <td>{{player.age}}</td>
+        <td>{{player.wage}}</td>
+        <td>{{player.endOfContract | date }}</td>
+        <td>
+            <button class="btn btn-light" (click)="viewPlayerDetails(player.id)">Details</button>
+            <button class="btn btn-danger" (click)="deletePlayer(player.id)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
