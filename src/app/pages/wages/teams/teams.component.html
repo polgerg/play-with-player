@@ -1,0 +1,26 @@
+<div class="card" *ngFor="let team of teams$ | async">
+    <p>Team full wage: {{ team.totalWage }} </p>
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Shirt number</th>
+            <th scope="col">Team</th>
+            <th scope="col">Age</th>
+            <th scope="col">Wage</th>
+            <th scope="col">End of contract date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let player of team.players ">
+            <th>{{player.name}}</th>
+            <td>{{player.shirtNumber}}</td>
+            <td>{{player.team}}</td>
+            <td>{{player.age}}</td>
+            <td>{{player.wage}}</td>
+            <td>{{player.endOfContract | date }}</td>
+          </tr>
+        </tbody>
+      </table>
+</div>
+

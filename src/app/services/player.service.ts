@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { map, Observable, of } from 'rxjs';
 import { Player } from '../interfaces/player';
-import { PlayersComponent } from '../pages/players/players.component';
+import { Team } from '../interfaces/team';
 
 @Injectable({
   providedIn: 'root'
@@ -230,6 +230,38 @@ export class PlayerService {
     let playerIndex = this.players.findIndex(player => player.id == id)
     this.players.splice(playerIndex, 1)
     return of()
+  }
+
+  getTeams(): Observable<Team[]> {
+    return of(this.players).pipe(
+        map(players => {
+            let teams: Team[] = [];
+            players.forEach(player => {
+                let wantedTeam = teams.find(team => team.teamName === player.team);
+                if(wantedTeam) {
+                    wantedTeam.players.push(player);
+                    wantedTeam.totalWage += player.wage
+                } else {
+                    teams.push({
+                        teamName: player.team,
+                        totalWage: player.wage,
+                        players: [player]
+                    })
+                }
+            })
+            return teams
+        })
+    )
+  }
+
+  getTotalWages(): Observable<number> {
+    return of(this.players).pipe(
+        map(players => {
+            let wages = 0;
+            players.forEach(player => wages += player.wage);
+            return wages
+        })
+    )
   }
 
 }

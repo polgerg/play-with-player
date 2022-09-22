@@ -1,0 +1,8 @@
+<div class="card">
+    <h3>Wage info box</h3>
+    <p>Current money: {{ currentMoney$ | async }} </p>
+    <p>Current monthly income: {{ monthlyIncome$ | async }} </p>
+    <p>Total wage of teams: {{ totalWages$ | async }}</p>
+    <p>Exptected money at the end of next month: {{ (currentMoney$ | async)! + (monthlyIncome$ | async)! - (totalWages$ | async)! }} </p>
+    <p>Club financial stability: {{ calculateFinancialStability( (currentMoney$ | async)!, (monthlyIncome$ | async)!, (totalWages$ | async)!) }} </p>
+</div>
