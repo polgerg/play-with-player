@@ -1,0 +1,6 @@
+@import '/src/assets/styles/mixin';
+
+.team-div {
+    @include card-basic;
+    width: 1000px;
+}

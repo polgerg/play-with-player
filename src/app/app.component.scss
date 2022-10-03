@@ -1,0 +1,21 @@
+@import '/src/assets/styles/variables';
+@import '/src/assets/styles/mixin';
+
+.body-main-container {
+    display: flex;
+    width: 100vw;
+    min-height: 100vh;
+}
+
+.navigation-div {
+    background-color: $background-color;
+    width: 250px;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+
+.outlet-div {
+    background-color: white;
+    width: 100%;
+}

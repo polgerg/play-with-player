@@ -1,0 +1,6 @@
+@import '/src/assets/styles/mixin';
+
+.card-basic {
+    @include card-basic;
+    width: 500px;
+}

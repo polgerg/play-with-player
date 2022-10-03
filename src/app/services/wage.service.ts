@@ -9,6 +9,8 @@ export class WageService {
   currentMoneyOfClub$: BehaviorSubject<number> = new BehaviorSubject<number>(0);
   monthlyIncomeOfClub$: BehaviorSubject<number> = new BehaviorSubject<number>(0);
 
+  currentMoney: number = 0;
+
   constructor() { 
     this.currentMoneyOfClub$.next(30000000);
     this.monthlyIncomeOfClub$.next(20000000);

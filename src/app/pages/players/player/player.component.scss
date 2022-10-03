@@ -1,0 +1,6 @@
+@import '/src/assets/styles/mixin';
+
+.player-container {
+    @include card-basic;
+    width: 400px;
+}

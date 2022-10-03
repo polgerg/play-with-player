@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    min-height: 100vh;
+}
+
+h1 {
+    margin: 50px auto;
+    font-size: 4rem;
+    text-align: center;
+    color: rgb(41, 40, 40);
+    font-family: 'Lato', sans-serif;
+}
+
+h2, h3, h4, h5, h6 {
+    color: rgb(41, 40, 40);
+    font-family: 'Lato', sans-serif;
+}
+
+p {
+    color: rgb(41, 40, 40);
+    font-family: 'Lato', sans-serif;
+}

@@ -1,5 +1,5 @@
-<div class="card" *ngFor="let team of teams$ | async">
-    <p>Team full wage: {{ team.totalWage }} </p>
+<div class="team-div" *ngFor="let team of teams$ | async">
+    <h3>Team full wage: {{ team.totalWage }} </h3>
     <table class="table">
         <thead>
           <tr>

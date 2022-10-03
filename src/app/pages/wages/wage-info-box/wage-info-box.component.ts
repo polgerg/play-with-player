@@ -17,7 +17,7 @@ export class WageInfoBoxComponent implements OnInit {
 
   expectedMoneyNextMonth: number = 0
 
-  constructor(private playerService: PlayerService, private wageService: WageService) {
+  constructor(private playerService: PlayerService, public wageService: WageService) {
     this.currentMoney$ = this.wageService.currentMoneyOfClub$;
     this.monthlyIncome$ = this.wageService.monthlyIncomeOfClub$;
     this.totalWages$ = this.playerService.getTotalWages()

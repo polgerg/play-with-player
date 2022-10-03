@@ -36,6 +36,7 @@ export class WageInputsComponent implements OnInit {
 
   changeCurrentMoney() {
     this.wageService.changeCurrentMoney(this.currentMoney.value)
+    this.wageService.currentMoney = this.currentMoney.value
   }
 
   changeMonthlyIncome() {

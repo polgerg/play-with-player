@@ -1,101 +1,104 @@
-<form class="form-group" [formGroup]="playerForm" (ngSubmit)="onAddPlayer()">
-
-    <!-- Name -->
-    <div>
-        <label class="form-label" for="name">Name</label>
-        <input 
-        class="form-control" 
-        type="text"
-        id="name"
-        name="name"
-        placeholder="Name"
-        formControlName="name"
-        [class.is-invalid]="name.touched && name.hasError('required') || name.hasError('pattern')"
-        >
-    </div>
-    <p *ngIf="name.touched && name.hasError('required')">Name is required!</p>
-    <p *ngIf="name.invalid && name.hasError('pattern')">You must enter only letters!</p>
-
-    <!-- Shirt Number -->
-    <div>
-        <label class="form-label" for="shirtNumber">Shirt Number</label>
-        <input 
-        class="form-control" 
-        type="text"
-        id="shirtNumber"
-        name="shirtNumber"
-        placeholder="Shirt Number"
-        formControlName="shirtNumber"
-        [class.is-invalid]="shirtNumber.touched && shirtNumber.hasError('required') || shirtNumber.hasError('pattern')"
-        >
-    </div>
-    <p *ngIf="shirtNumber.touched && shirtNumber.hasError('required')">Shirt number is required!</p>
-    <p *ngIf="shirtNumber.invalid && shirtNumber.hasError('pattern')">You must enter only letters!</p>
-    
-    <!-- Team -->
-    <div>
-        <label class="form-label" for="team">Team</label>
-        <input 
-        class="form-control" 
-        type="text"
-        id="team"
-        name="team"
-        placeholder="Team"
-        formControlName="team"
-        [class.is-invalid]="team.touched && team.hasError('required') || team.hasError('pattern')"
-        >
-    </div>
-    <p *ngIf="team.touched && team.hasError('required')">Team is required!</p>
-    <p *ngIf="team.invalid && team.hasError('pattern')">You must enter only letters!</p>
-
-    <!-- Age -->
-    <div>
-        <label class="form-label" for="age">Age</label>
-        <input 
-        class="form-control" 
-        type="text"
-        id="age"
-        name="age"
-        placeholder="Age"
-        formControlName="age"
-        [class.is-invalid]="age.touched && age.hasError('required') || age.hasError('pattern')"
-        >
-    </div>
-    <p *ngIf="age.touched && age.hasError('required')">Age is required!</p>
-    <p *ngIf="age.invalid && age.hasError('pattern')">You must enter only numbers!</p>
-
-    <!-- Wage -->
-    <div>
-        <label class="form-label" for="wage">Wage</label>
-        <input 
-        class="form-control" 
-        type="text"
-        id="wage"
-        name="wage"
-        placeholder="Wage"
-        formControlName="wage"
-        [class.is-invalid]="wage.touched && wage.hasError('required') || wage.hasError('pattern')"
-        >
-    </div>
-    <p *ngIf="wage.touched && wage.hasError('required')">Wage is required</p>
-    <p *ngIf="wage.invalid && wage.hasError('pattern')">You must enter only numbers</p>
-
-    <!-- End of contract -->
-    <div>
-        <label class="form-label" for="endOfContract">End of Contract</label>
-        <input 
-        class="form-control" 
-        type="text"
-        id="endOfContract"
-        name="endOfContract"
-        placeholder="End of Contract"
-            formControlName="endOfContract"
-            [class.is-invalid]="endOfContract.touched && endOfContract.hasError('required') || endOfContract.hasError('pattern')"
+<h1>Add player</h1>
+<div class="add-player-container">
+    <form class="form-group" [formGroup]="playerForm" (ngSubmit)="onAddPlayer()">
+        <!-- Name -->
+        <div>
+            <label class="form-label" for="name">Name</label>
+            <input 
+            class="form-control" 
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Name"
+            formControlName="name"
+            [class.is-invalid]="name.touched && name.hasError('required') || name.hasError('pattern')"
             >
-    </div>
-    <p *ngIf="endOfContract.touched && endOfContract.hasError('required')">End of Contract is required</p>
-    <p *ngIf="endOfContract.invalid && endOfContract.hasError('pattern')">You must enter only letters</p>
+        </div>
+        <p *ngIf="name.touched && name.hasError('required')">Name is required!</p>
+        <p *ngIf="name.invalid && name.hasError('pattern')">You must enter only letters!</p>
+    
+        <!-- Shirt Number -->
+        <div>
+            <label class="form-label" for="shirtNumber">Shirt Number</label>
+            <input 
+            class="form-control" 
+            type="text"
+            id="shirtNumber"
+            name="shirtNumber"
+            placeholder="Shirt Number"
+            formControlName="shirtNumber"
+            [class.is-invalid]="shirtNumber.touched && shirtNumber.hasError('required') || shirtNumber.hasError('pattern')"
+            >
+        </div>
+        <p *ngIf="shirtNumber.touched && shirtNumber.hasError('required')">Shirt number is required!</p>
+        <p *ngIf="shirtNumber.invalid && shirtNumber.hasError('pattern')">You must enter only letters!</p>
         
-    <button class="btn btn-danger">Add player</button>
-    <button class="btn btn-light" (click)="navigateBack()">Back</button>
-</form>
+        <!-- Team -->
+        <div>
+            <label class="form-label" for="team">Team</label>
+            <input 
+            class="form-control" 
+            type="text"
+            id="team"
+            name="team"
+            placeholder="Team"
+            formControlName="team"
+            [class.is-invalid]="team.touched && team.hasError('required') || team.hasError('pattern')"
+            >
+        </div>
+        <p *ngIf="team.touched && team.hasError('required')">Team is required!</p>
+        <p *ngIf="team.invalid && team.hasError('pattern')">You must enter only letters!</p>
+    
+        <!-- Age -->
+        <div>
+            <label class="form-label" for="age">Age</label>
+            <input 
+            class="form-control" 
+            type="text"
+            id="age"
+            name="age"
+            placeholder="Age"
+            formControlName="age"
+            [class.is-invalid]="age.touched && age.hasError('required') || age.hasError('pattern')"
+            >
+        </div>
+        <p *ngIf="age.touched && age.hasError('required')">Age is required!</p>
+        <p *ngIf="age.invalid && age.hasError('pattern')">You must enter only numbers!</p>
+    
+        <!-- Wage -->
+        <div>
+            <label class="form-label" for="wage">Wage</label>
+            <input 
+            class="form-control" 
+            type="text"
+            id="wage"
+            name="wage"
+            placeholder="Wage"
+            formControlName="wage"
+            [class.is-invalid]="wage.touched && wage.hasError('required') || wage.hasError('pattern')"
+            >
+        </div>
+        <p *ngIf="wage.touched && wage.hasError('required')">Wage is required</p>
+        <p *ngIf="wage.invalid && wage.hasError('pattern')">You must enter only numbers</p>
+    
+        <!-- End of contract -->
+        <div>
+            <label class="form-label" for="endOfContract">End of Contract</label>
+            <input 
+            class="form-control" 
+            type="text"
+            id="endOfContract"
+            name="endOfContract"
+            placeholder="End of Contract"
+                formControlName="endOfContract"
+                [class.is-invalid]="endOfContract.touched && endOfContract.hasError('required') || endOfContract.hasError('pattern')"
+                >
+        </div>
+        <p *ngIf="endOfContract.touched && endOfContract.hasError('required')">End of Contract is required</p>
+        <p *ngIf="endOfContract.invalid && endOfContract.hasError('pattern')">You must enter only letters</p>
+            
+        <button class="btn btn-danger">Add player</button>
+        <button class="btn btn-light" (click)="navigateBack()">Back</button>
+    </form>
+</div>
+

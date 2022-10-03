@@ -1,12 +1,12 @@
-<div class="card">
-    <form [formGroup]="wageForm">
-        <div>
-            <label for="">Current money:</label>
-            <input type="number" id="currentMoneyInput" (input)="changeCurrentMoney()" formControlName="currentMoney">
-        </div>
-        <div>
-            <label for="clubMonthlyIncomeInput">Club monthly income:</label>
-            <input type="number" id="clubMonthlyIncomeInput" (input)="changeMonthlyIncome()" formControlName="monthlyIncome">
-        </div>
-    </form>
-</div>
+
+<form [formGroup]="wageForm">
+    <div>
+        <label for="">Current money:</label>
+        <input class="form-control" type="number" id="currentMoneyInput" (input)="changeCurrentMoney()" formControlName="currentMoney">
+    </div>
+    <div>
+        <label for="clubMonthlyIncomeInput">Club monthly income:</label>
+        <input class="form-control" type="number" id="clubMonthlyIncomeInput" (input)="changeMonthlyIncome()" formControlName="monthlyIncome">
+    </div>
+</form>
+

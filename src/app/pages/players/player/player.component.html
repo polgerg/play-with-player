@@ -1,10 +1,11 @@
-<div class="card" *ngIf="(player$ | async) as player">
+<h1>Player details</h1>
+<div class="player-container" *ngIf="(player$ | async) as player">
     <p>Name: {{ player.name }}</p>
     <p>Shirt Number: {{ player.shirtNumber}} </p>
     <p>Team: {{ player.team}} </p>
     <p>Age: {{ player.age }} </p>
     <p>Wage {{ player.wage }} </p>
     <p>End of Contract: {{ player.endOfContract | date }} </p>
-    <button class="btn btn-light" (click)="navigateToEdit()">Edit Player</button>    
+    <button class="btn btn-warning" (click)="navigateToEdit()">Edit Player</button>    
     <button class="btn btn-danger" (click)="deletePlayer()">Delete Player</button>    
 </div>
